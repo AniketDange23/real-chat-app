@@ -1,38 +1,359 @@
-.App {
+
+.register-container {
+  height: 100vh;
+  object-fit: cover;
+  background-image: url("./images/main-bg.jpg");
+  background-size: cover;
+  width: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  }
+.register-wrapper {
+  background-size: cover;
+  padding: 30px 60px;
+
+  align-items: center;
+  flex-direction: column;
+  border-radius: 10px;
+}
+.register-wrapper form {
+  margin: auto;
+  color: rgb(255, 255, 255);
+  gap: 20px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.register-wrapper input,
+button {
+  border: none;
+  width: 300px;
+  padding: 12px;
+  background: #252525;
+  outline: none;
+  color: aliceblue;
+  border-radius: 5px;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.register-wrapper button {
+  font-size: 16px;
+  padding: 8px;
+  width: 200px;
+  cursor: pointer;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.register-wrapper span {
+  font-family: sans-serif;
+}
+.register-wrapper a {
+  text-decoration: none;
+  color: #2c99e8;
+}
+.register-wrapper label {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  gap: 10px;
+}
+.avatar{
+    height: 40px;
+}
+.home {
+  color: rgb(196, 196, 196);
+  
+  object-fit: cover;
+  background-image: url("./images/main-bg.jpg");
+  background-size: cover;
+  height: 100vh;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+}
+.container {
+  max-width: 65%;
+  box-shadow: 0px 1px 10px #e4e4e45e;
+
+  display: flex;
+  border-radius: 30px;
+  height: 80%;
+}
+.sider-bar {
+  flex: 1;
+border: 1px solid #2a2a2a;
+  border-radius: 30px 0 0 30px;
+}
+.chat {
+
+  border-radius: 0 30px 30px 0;
+  flex: 2;
+}
+/* navbar */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content:space-evenly;
+  border-radius: 30px 0 0 0;
+border-bottom: 2px solid #212121;
+}
+.logo {
+  padding: 0 2cap;
+
+  font-weight: bold;
+  color: #aaaaaa;
+
+}
+.user {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.user button {
+  width: 65px;
+  margin: 10px;
+}
+.user-data {
+  display: flex;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+/* search */
+.search {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  border-bottom:1px solid #867e7e4f;
+
+}
+.search input {
+  width: 93%;
+  padding: 10px;
+  font-size: 0.8rem;
+  border: none;
+  outline: none;
+  color: rgb(192, 192, 192);
+  background: none;
+
+  font-size: 16px;
+}
+.search  input::placeholder {
+  font-weight: 300;
+}
+.search input:hover{
+  cursor: pointer;
+  background: #47474774;
+}
+/* users */
+.userChat {
+  display: flex;
+  height: 65px;
+
+ align-items: center;
+ text-align: justify;
+  border-bottom:1px solid #867e7e4f;
+
+}
+.userChat img {
+  padding: 5px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.userChatInfo{
+  margin: 0;
+  display: flex;
+  padding: 15px;
+
+  flex-direction: column;
+  text-align: justify;
+}
+.userChatInfo p{
+  overflow: hidden;
+  font: bold 16px sans-serif;
+  margin: 0;
+}
+.userChatInfo span{
+
+  font: lighter 12px;
+  color: #7e7e7e;
+}
+/* chats */
+.chats{
+   display: flex;
+  flex-direction: column;
+  height: 73%;  
+    overflow-y:auto;
+  scroll-behavior: smooth;
+ 
+}
+.chat-container {
+  display: flex;
+  align-items: center;
+
+}
+/* hover for container */
+.chat-container:hover {
+    cursor: pointer;
+    background: #00000074;
+}
+.chats img {
+  width: 40px;
+  height: 40px;
+  border-radius: 40px;
+}
+.chat-content {
+  text-align: justify;
+  align-items:flex-start;
+  display: flex;
+  height: 60px;
+  flex-direction: column;
+}
+.chat-content span {
+  font: 600 1rem sans-serif;
+}
+.chat-content p {
+  margin-top: 5px ;
+  font: 400 0.8rem sans-serif;
+  color: #cacaca;
+}
+
+/* CHAT */
+.chat {
+  flex: 2;
+}
+.chatInfo {
+  height: 50px;
+  justify-content: space-between;
+  padding: 0 2rem;
+  align-items: center;
+  background: #0000007d;
+  display: flex;
+  border-radius: 0 30px 0 0;
+}
+.chatInfo img {
+  width: 40px;
+  height: 40px;
+  border-radius: 35px;
+}
+.ChatIcons {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+/* message */
+.message{
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+
+}
+.messageContent{
+  width: 70%;
+   gap: 10px;
+
+}
+.messageContent p{
+  font: lighter 100  0.8rem  serif;
+    max-width: max-content;
+  background: #0808089e;
+  border: 5px solid#ffffff21;
+  padding: 8px;
+  margin: 5px;
+    border-radius:10px ;
+}
+.messageInfo{
+  display: flex;
+}
+.messageInfo img{
+    object-fit: cover;
+  padding: 5px;
+    width: 40px;
+  height: 40px;
+    border-radius: 40px;
+}
+.messageContent img{
+  width: 40%;
+  border: 5px solid#75757521;
+  border-radius: 5px;
+}
+
+/* message revers */
+& .owner{
+flex-direction: row-reverse;
+align-items: center;
+justify-content: end;
+
+}
+& .owner .messageContent {
+  display: flex;
+  flex-direction: column;
+  align-items: self-end;
+align-self: start;
   }
-  to {
-    transform: rotate(360deg);
-  }
+
+/* messages */
+.messages {
+  padding: 10px;
+  height: calc(100% - 120px);
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch; 
+
+}
+.message::-webkit-scrollbar-thumb {
+  background-color: #a74c4c; /* You can choose your own color */
+}
+/* input */
+.input {
+  display: flex;
+  
+  background: #0808089e;
+  color: #ffffff;
+  border-radius: 0 0 30px 0;
+  align-items: center;
+  padding: 0 1rem;
+  height: 50px;
+}
+.input-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.input input {
+  background: none;
+  color: rgb(236, 236, 236);
+  border: none;
+  outline: none;
+  width: 500px;
+  padding: 10px;
+  cursor: pointer;
+}
+.inputIcons label svg {
+  cursor: pointer;
+}
+.sendButton {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  width: auto;
+  border-radius: 100%;
+  margin-left: 20px;
+}
+.sendButton svg {
+  width: 20px;
+  height: 20px;
+}
+
+.inputIcons {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  cursor: pointer;
+}
+
+.send img{
+  width: 30px;
 }
